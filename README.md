@@ -1,6 +1,6 @@
 # Batch sashimi plots
 
-Basic script to get publication-ready sashimi plots using ggsashimi.
+Basic script to get publication-ready sashimi plots using [ggsashimi](https://github.com/guigolab/ggsashimi).
 
 In order to pull the Singularity image:
 ```bash
