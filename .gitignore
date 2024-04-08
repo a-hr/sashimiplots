@@ -1,4 +1,7 @@
+# input/output files
 *bams/
 *plots*/
 *.gtf
+
+# container images
 *sif

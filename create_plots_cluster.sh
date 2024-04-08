@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
 # plot options
-bam_tsv=input_bams.tsv
+output_prefix=plots/
 min_cov=3
+agg=mean_j
+alpha=0.6
+
+bam_tsv=input_bams.tsv
 gtf=gencode.v41.primary_assembly.annotation.gtf
 palette=palette.txt
-output_prefix=plots/
-agg=mean_j
 
 mkdir -p $output_prefix
 
@@ -20,9 +22,9 @@ do
     esac
 done
 
-# loop over all the columns of the config file and extract first two columns
 module load Singularity
 
+# loop over all the columns of the config file and extract first two columns
 while read -r eventID coords
 do  
     echo "Plotting $eventID..."
@@ -37,7 +39,7 @@ do
         -C 3 \
         -O 3 \
         -A $agg \
-        --alpha .6 \
+        --alpha $alpha \
         --fix-y-scale \
         --ann-height 5 \
         --width 15
