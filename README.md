@@ -2,6 +2,12 @@
 
 Basic script to get publication-ready sashimi plots using [ggsashimi](https://github.com/guigolab/ggsashimi).
 
+- [Batch sashimi plots](#batch-sashimi-plots)
+  - [Requirements](#requirements)
+  - [Running the script](#running-the-script)
+  - [Input files](#input-files)
+  - [Run options](#run-options)
+
 ## Requirements
 
 This script can either be run on a local machine or on a High Performance Computing (HPC) cluster. The following software is required:
@@ -70,7 +76,7 @@ The basic options are:
 
 For further configuration, check the help message below and modify the script accordingly.
 
-```bash
+```plaintext
 usage: ggsashimi.py [-h] -b BAM -c COORDINATES [-o OUT_PREFIX] [-S OUT_STRAND] [-M MIN_COVERAGE] [-j JUNCTIONS_BED] [-g GTF] [-s STRAND]
                     [--shrink] [-O OVERLAY] [-A AGGR] [-C COLOR_FACTOR] [--alpha ALPHA] [-P PALETTE] [-L LABELS] [--fix-y-scale]
                     [--height HEIGHT] [--ann-height ANN_HEIGHT] [--width WIDTH] [--base-size BASE_SIZE] [-F OUT_FORMAT] [-R OUT_RESOLUTION]
