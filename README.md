@@ -24,6 +24,8 @@ In order to pull the Singularity image:
 module load Singularity Go  # Load the modules if using HPC
 singularity pull ggsashimi.sif docker://guigolab/ggsashimi
 ```
+> Note: The image is expected to be in the same directory as the script.
+
 
 ## Running the script
 

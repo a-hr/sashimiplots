@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#SBATCH --job-name=ggsashimi
+#SBATCH --time=00:05:00
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=16G
+
 # plot options
 output_prefix=plots/
 min_cov=3
@@ -22,7 +27,7 @@ do
     esac
 done
 
-module load Singularity
+module load Singularity Go
 
 # loop over all the columns of the config file and extract first two columns
 while read -r eventID coords
